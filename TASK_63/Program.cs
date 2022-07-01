@@ -1,0 +1,28 @@
+﻿/*
+Задача 63: 
+Задайте значение N. 
+Напишите программу, которая выведет все 
+натуральные числа в промежутке от 1 до N.
+N = 5 -> "1, 2, 3, 4, 5"
+N = 6 -> "1, 2, 3, 4, 5, 6"
+*/
+
+
+void NuturalNumberN(int number, int current = 1)
+{
+    if (number < current)
+    {
+        return;
+    }
+    else
+    {
+        System.Console.Write(current);
+        if (current<number)
+        {
+            System.Console.Write(", ");
+        }
+        NuturalNumberN(number, current + 1);
+
+    }
+}
+NuturalNumberN(5);
